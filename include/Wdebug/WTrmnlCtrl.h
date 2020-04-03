@@ -1,12 +1,12 @@
 /******************************************************************************
-  > File Name		: WSD_Terminal_ctrl.h
+  > File Name		: WTrmnlCtrl.h
   > Author			: dong
   > Mail			: 3235459847@qq.com
   > Created Time	: 2020年04月02日 星期四 11时55分35秒
 ******************************************************************************/
 
-#ifndef __WSD_TERMINAL_CTRL_H
-#define __WSD_TERMINAL_CTRL_H
+#ifndef __WTRMNLCTRL_H
+#define __WTRMNLCTRL_H
 
 // 前景和背景色码
 // 黑色

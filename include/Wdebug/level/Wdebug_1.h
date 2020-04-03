@@ -1,12 +1,12 @@
 /******************************************************************************
-  > File Name		: WSD_debug_1.h
+  > File Name		: Wdebug_1.h
   > Author			: dong
   > Mail			: 3235459847@qq.com
   > Created Time	: 2020年04月02日 星期四 17时17分32秒
 ******************************************************************************/
 
-#ifndef __WSD_DEBUG_1_H
-#define __WSD_DEBUG_1_H
+#ifndef __WDEBUG_1_H
+#define __WDEBUG_1_H
 
 #include "Wdebug/WSD_debug_print.h"
 
