@@ -6,18 +6,17 @@ CCXX=$(MYCC)
 
 #STANDARD:=-std=c++11
 
-SRCDIR:=.
+SRCDIR := ./
+SRCDIR += source/
 
 INCDIR:= 
-INCDIR+=./
+INCDIR+=.
 INCDIR+=./include
 INCDIR:=$(addprefix -I, $(INCDIR))
 
 CLIBS:=
 
 BUILD=build/
-DEPSDIR=$(BUILD)depend/
-OBJDIR=$(BUILD)obj/
 
 CCXX_PARAM:=
 
@@ -28,33 +27,35 @@ vpath %.c $(SRCDIR)
 
 SRC:=$(foreach i, \
 	$(SRCDIR), \
-	$(wildcard $(addprefix $(i)/*, .c) ) \
+	$(wildcard $(addprefix $(i)*, .c) ) \
 	)
 
-OBJ:=$(addsuffix .o, $(basename $(notdir $(SRC))))
+OBJ := $(SRC:.c=.o)
 
-DEPS:=$(foreach i, $(OBJ:.o=.d), $(addprefix $(DEPSDIR), $(i)))
-vpath %.o $(OBJDIR)
+DEPS := $(addprefix $(BUILD), $(OBJ:.o=.d))
+
+vpath %.o $(BUILD)
 
 %.o:%.cpp
-	$(MYCXX) $(CXX_PARAM) $< $(CLIBS) $(STANDARD) -o $@ -MMD -MF $(DEPSDIR)$*.d -MP $(INCDIR) ; \
-	mv $@ $(OBJDIR)
+	@echo [$(MYCXX)]---[$<]
+	@$(MYCXX) $(CXX_PARAM) $< $(CLIBS) $(STANDARD) -o $@ -MMD -MF $(BUILD)$*.d -MP $(INCDIR) ; \
+	mv $@ $(BUILD)$@
 
 %.o:%.c
-	$(MYCC) $(CC_PARAM) $< $(CLIBS) $(STANDARD) -o $@ -MMD -MF $(DEPSDIR)$*.d -MP $(INCDIR) ; \
-	mv $@ $(OBJDIR)
+	@echo [$(MYCC)]---[$<]
+	@$(MYCC) $(CC_PARAM) $< $(CLIBS) $(STANDARD) -o $@ -MMD -MF $(BUILD)$*.d -MP $(INCDIR) ; \
+	mv $@ $(BUILD)$@
 
-.PHONY:all clean mkdirDEPS mkdirOBJ
-all:mkdirDEPS mkdirOBJ $(exe_name)
+%/:
+	@mkdir -p $@
+
+.PHONY:all clean  
+all:$(addprefix $(BUILD), $(SRCDIR)) $(exe_name)
 
 $(exe_name):$(OBJ)
-	$(CCXX) $(CCXX_PARAM) $(filter %.o, $(addprefix $(OBJDIR), $(notdir $^))) $(CLIBS) $(STANDARD) -o $@ 
-
-mkdirDEPS:
-	mkdir -p $(DEPSDIR)
-
-mkdirOBJ:
-	mkdir -p $(OBJDIR)
+	@echo ---------------------------[create $@]-[$(CCXX)]----------------------------------
+	@echo " "$(foreach i, $(addprefix $(BUILD), $(OBJ)), $(i)"\r\n ")
+	@$(CCXX) $(CCXX_PARAM) $(addprefix $(BUILD), $(OBJ)) $(CLIBS) $(STANDARD) -o $@ 
 
 -include $(DEPS)
 
