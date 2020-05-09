@@ -14,6 +14,13 @@
 #include "Wdebug/level/Wdebug_0.h"
 #include "Wdebug/level/Wdebug_1.h"
 
+#define		WSD_DEBUG_UP_LEVEL			2
+#define		WSD_DEBUG_UP_FLAG				2
+#include	"Wdebug/WSD_debug_print_up.h"
+
+#define		WSD_DEBUG_DOWN_LEVEL			2
+#define		WSD_DEBUG_DOWN_FLAG				2
+#include	"Wdebug/WSD_debug_print_down.h"
 
 #endif
 

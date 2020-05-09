@@ -27,7 +27,7 @@
 
 #define		Wdebug_INFO_1(info,...)		WSD_DEBUG_INFO(info, ##__VA_ARGS__)
 
-#define		Wdebug_BUF_1(FORMAT, BUF, LENGTH)	WSD_DEBUG_BUF(FORMAT,BUF,LENGTH);
+#define		Wdebug_BUF_1(FORMAT, BUF, LENGTH, INFO, ...)	WSD_DEBUG_BUF(FORMAT,BUF,LENGTH, INFO, ##__VA_ARGS__);
 
 #define		Wdebug_if_INFO_1(IF,info,...)		if (IF) { WSD_DEBUG_INFO(info, ##__VA_ARGS__) }
 
@@ -55,7 +55,7 @@
 
 #define		Wdebug_INFO_1(info,...)
 
-#define		Wdebug_BUF_1(FORMAT, BUF, LENGTH)
+#define		Wdebug_BUF_1(FORMAT, BUF, LENGTH, INFO, ...)
 
 #define		Wdebug_if_INFO_1(IF,info,...)
 
