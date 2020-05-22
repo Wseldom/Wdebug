@@ -42,19 +42,19 @@
 //设置消隐
 #define		Trmnl_SET_BLANK	"\033[8m"
 //设置前景色
-#define		Trmnl_SET_FORE(color)	"\033[3"color"m"
+#define		Trmnl_SET_FORE(COLOR)	"\033[3"COLOR"m"
 //设置背景色
-#define		Trmnl_SET_BACKGROUND(color)	"\033[4"color"m"
+#define		Trmnl_SET_BACKGROUND(COLOR)	"\033[4"COLOR"m"
 //设置光标上移n行
-#define		Trmnl_MOVUP(n)			"\033["n"A"
+#define		Trmnl_MOVUP(N)			"\033["N"A"
 //设置光标下移n行
-#define		Trmnl_MOVDOWN(n)	"\03["n"B"
+#define		Trmnl_MOVDOWN(N)	"\03["N"B"
 //设置右移n行
-#define		Trmnl_MOVRIGHT(n)	"\033["n"C"
+#define		Trmnl_MOVRIGHT(N)	"\033["N"C"
 //设置左移n行
-#define		Trmnl_MOVLEFT(n)	"\033["n"D"
+#define		Trmnl_MOVLEFT(N)	"\033["N"D"
 //设置光标位置
-#define		Trmnl_MOVE(x,y)	"\033["y";"x"H"
+#define		Trmnl_MOVE(X,Y)	"\033["Y";"X"H"
 //光标复位
 #define		Trmnl_RST_CURSOR	"\033[H"
 //清屏

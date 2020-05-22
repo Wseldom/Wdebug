@@ -34,6 +34,11 @@ int main(void)
 
 	Wdebug_INFO_DOWN(3, "%s", "降序等级测试!");
 	Wdebug_INFO_DOWN(1, "%s 当前等级为：%d", "将徐等级测试失败!", WSD_DEBUG_UP_LEVEL);
+
+	Wlog("打印日志");
+	Wlog_style(FGC_BLUE, "指定风格日志");
+	Werr("打印报错日志");
+	Walarm("打印警告");
 }
 
 
