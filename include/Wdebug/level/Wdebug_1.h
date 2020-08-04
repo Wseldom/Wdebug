@@ -8,10 +8,10 @@
 #ifndef __WDEBUG_1_H
 #define __WDEBUG_1_H
 
-#include "Wdebug/WSD_debug_print.h"
+#include "Wdebug/Wprint.h"
 
-//#ifdef WSD_DEBUG_ENABLE_1
-#if WSD_DEBUG_LEVEL		<= 1
+//#ifdef WDEBUG_ENABLE_1
+#if WDEBUG_LEVEL		<= 1
 
 #define 	Wdebug_if_FUN_1(IF,FUN)    if (IF) {FUN}
 
@@ -25,19 +25,19 @@
 
 #define 	Wdebug_pFUN_1(FUN,param)    (*FUN)param;
 
-#define		Wdebug_INFO_1(info,...)		WSD_DEBUG_INFO(info, ##__VA_ARGS__)
+#define		Wdebug_INFO_1(info,...)		WDEBUG_INFO(info, ##__VA_ARGS__)
 
-#define		Wdebug_BUF_1(FORMAT, BUF, LENGTH, INFO, ...)	WSD_DEBUG_BUF(FORMAT,BUF,LENGTH, INFO, ##__VA_ARGS__);
+#define		Wdebug_BUF_1(FORMAT, BUF, LENGTH, INFO, ...)	WDEBUG_BUF(FORMAT,BUF,LENGTH, INFO, ##__VA_ARGS__);
 
-#define		Wdebug_if_INFO_1(IF,info,...)		if (IF) { WSD_DEBUG_INFO(info, ##__VA_ARGS__) }
+#define		Wdebug_if_INFO_1(IF,info,...)		if (IF) { WDEBUG_INFO(info, ##__VA_ARGS__) }
 
-#define		Wdebug_else_INFO_1(info,...)		else { WSD_DEBUG_INFO(info, ##__VA_ARGS__) }
+#define		Wdebug_else_INFO_1(info,...)		else { WDEBUG_INFO(info, ##__VA_ARGS__) }
 
-#define		Wdebug_elif_INFO_1(ELIF,info,...)		else if (ELIF) { WSD_DEBUG_INFO(info, ##__VA_ARGS__) }
+#define		Wdebug_elif_INFO_1(ELIF,info,...)		else if (ELIF) { WDEBUG_INFO(info, ##__VA_ARGS__) }
 
-#define		Wdebug_case_INFO_1(CASE,info,...)		case CASE: { WSD_DEBUG_INFO(info, ##__VA_ARGS__) break;}
+#define		Wdebug_case_INFO_1(CASE,info,...)		case CASE: { WDEBUG_INFO(info, ##__VA_ARGS__) break;}
 
-#define		Wdebug_default_INFO_1(info,...)		default: { WSD_DEBUG_INFO(info, ##__VA_ARGS__) break;}
+#define		Wdebug_default_INFO_1(info,...)		default: { WDEBUG_INFO(info, ##__VA_ARGS__) break;}
 
 #else	
 

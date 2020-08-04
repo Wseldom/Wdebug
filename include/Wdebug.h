@@ -8,21 +8,21 @@
 #ifndef __WDEBUG_H
 #define __WDEBUG_H
 
-#define		WSD_DEBUG_FLAG		1
-#define		WSD_DEBUG_LEVEL		 0
+#define		WDEBUG_FLAG		2
+#define		WDEBUG_LEVEL		 0
 #include "Wdebug/level/Wdebug_0.h"
 #include "Wdebug/level/Wdebug_1.h"
 
-#define		WSD_DEBUG_UP_LEVEL			2
-#define		WSD_DEBUG_UP_FLAG				2
-#include	"Wdebug/WSD_debug_print_up.h"
+#define		WDEBUG_UP_LEVEL			2
+#define		WDEBUG_UP_FLAG				2
+#include	"Wdebug/WdebugUp.h"
 
-#define		WSD_DEBUG_DOWN_LEVEL			2
-#define		WSD_DEBUG_DOWN_FLAG				2
-#include	"Wdebug/WSD_debug_print_down.h"
+#define		WDEBUG_DOWN_LEVEL			2
+#define		WDEBUG_DOWN_FLAG				2
+#include	"Wdebug/WdebugDown.h"
 
-#define		WSD_LOG_FLAG		2
-#include "Wdebug/WSD_log.h"
+#define		WLOG_FLAG		2
+#include "Wdebug/Wlog.h"
 /*设置前景色*/
 //黑色
 #define		FGC_BLACK	Trmnl_SET_FORE(Trmnl_color_black)
