@@ -14,50 +14,15 @@
 #include "Wdebug/level/Wdebug_1.h"
 
 #define		WDEBUG_UP_LEVEL			2
-#define		WDEBUG_UP_FLAG				2
+#define		WDEBUG_UP_ENABLE
 #include	"Wdebug/WdebugUp.h"
 
 #define		WDEBUG_DOWN_LEVEL			2
-#define		WDEBUG_DOWN_FLAG				2
+#define		WDEBUG_DOWN_ENABLE
 #include	"Wdebug/WdebugDown.h"
 
-#define		WLOG_FLAG		2
+#define		WLOG_ENABLE
 #include "Wdebug/Wlog.h"
-/*设置前景色*/
-//黑色
-#define		FGC_BLACK	Trmnl_SET_FORE(Trmnl_color_black)
-//红色
-#define		FGC_RED		Trmnl_SET_FORE(Trmnl_color_red)
-//绿色
-#define		FGC_GREEN	Trmnl_SET_FORE(Trmnl_color_green)
-//黄色
-#define		FGC_YELLOW	Trmnl_SET_FORE(Trmnl_color_yellow)
-//蓝色
-#define		FGC_BLUE	Trmnl_SET_FORE(Trmnl_color_blue)
-//紫色
-#define		FGC_PURPLE	Trmnl_SET_FORE(Trmnl_color_purple)
-//深绿色
-#define		FGC_BTLGRN	Trmnl_SET_FORE(Trmnl_color_btlGrn)
-//白色
-#define		FGC_WHILE	Trmnl_SET_FORE(Trmnl_color_white)
-
-/*设置背景色*/
-//黑色
-#define		BKC_BLACK	Trmnl_SET_BACKGROUND(Trmnl_color_black)
-//红色
-#define		BKC_RED		Trmnl_SET_BACKGROUND(Trmnl_color_red)
-//绿色
-#define		BKC_GREEN	Trmnl_SET_BACKGROUND(Trmnl_color_green)
-//黄色
-#define		BKC_YELLOW	Trmnl_SET_BACKGROUND(Trmnl_color_yellow)
-//蓝色
-#define		BKC_BLUE	Trmnl_SET_BACKGROUND(Trmnl_color_blue)
-//紫色
-#define		BKC_PURPLE	Trmnl_SET_BACKGROUND(Trmnl_color_purple)
-//深绿色
-#define		BKC_BTLGRN	Trmnl_SET_BACKGROUND(Trmnl_color_btlGrn)
-//白色
-#define		BKC_WHILE	Trmnl_SET_BACKGROUND(Trmnl_color_white)
 
 
 #endif

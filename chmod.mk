@@ -1,4 +1,6 @@
-CHMOD_FILE_TYPE := .h .c .cpp
+CHMOD_FILE_TYPE := .h 
+#CHMOD_FILE_TYPE += .c 
+#CHMOD_FILE_TYPE += .cpp 
 
 CHMOD_DIR := include
 #CHMOD_DIR+=

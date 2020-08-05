@@ -8,72 +8,38 @@
 #ifndef __WLOG_H
 #define __WLOG_H
 
-#include "WTrmnlCtrl.h"
-#include <stdio.h>
+#include "Wdebug/original/WlogOriginal.h"
 
-#ifndef WLOG_PRINT
-#define		WLOG_PRINT		printf
-#endif
+	#ifndef WLOG_ENABLE
 
-#if WLOG_FLAG == 0
+		#define		Wlog(info,...)
 
-#define		Wlog(info,...)
+		#define		Wbuf(FORMAT,BUF,LENGTH, INFO, ...)
 
-#define		WlogStyle(STYLE,info,...)
+		#define		WlogStyle(STYLE,info,...)
 
-#define		Werr(info,...)
+		#define		Werr(info,...)
 
-#define		Walarm(info,...)
+		#define		Walarm(info,...)
 
-#define		Wbuf(FORMAT,BUF,LENGTH, INFO, ...)
+	#else
 
-#elif WLOG_FLAG == 1
+		#define		Wlog(INFO,...)		\
+					WlogOriginal(INFO, ##__VA_ARGS__);
 
-#define		WLOG_HEAD_ATTR			 	Trmnl_SET_FORE(Trmnl_color_yellow)
-#define		WLOG_ALARM_HEAD_ATTR			Trmnl_SET_FORE(Trmnl_color_white)
-#define		WLOG_INFO_ATTR				Trmnl_SET_FORE(Trmnl_color_green)
+		#define		Wbuf(FORMAT,BUF,LENGTH,INFO,...)		\
+					WbufOriginal(FORMAT,BUF,LENGTH,INFO,##__VA_ARGS__)
 
-#define		Wlog(info,...)		WLOG_PRINT(Trmnl_RST WLOG_HEAD_ATTR "[file:%s][time:%s][date:%s][func:%s][line:%d]["WLOG_INFO_ATTR  info Trmnl_RST WLOG_HEAD_ATTR "]\r\n" Trmnl_RST, __FILE__, __TIME__, __DATE__, __func__, __LINE__, ##__VA_ARGS__);
+		#define		Werr(INFO,...)		\
+					WerrOriginal(INFO,##__VA_ARGS__)
 
-#define		WlogStyle(STYLE,info,...)		WLOG_PRINT(Trmnl_RST WLOG_HEAD_ATTR "[file:%s][time:%s][date:%s][func:%s][line:%d][" STYLE  info Trmnl_RST WLOG_HEAD_ATTR "]\r\n" Trmnl_RST, __FILE__, __TIME__, __DATE__, __func__, __LINE__, ##__VA_ARGS__);
+		#define		Walarm(INFO,...)		\
+					WalarmOriginal(INFO,##__VA_ARGS__)
 
-#define		Werr(info,...)		WLOG_PRINT(Trmnl_RST WLOG_HEAD_ATTR "[file:%s][time:%s][date:%s][func:%s][line:%d][" Trmnl_SET_FORE(Trmnl_color_red)  info Trmnl_RST WLOG_HEAD_ATTR "]\r\n" Trmnl_RST, __FILE__, __TIME__, __DATE__, __func__, __LINE__, ##__VA_ARGS__);
+		#define		WlogStyle(INFO_STYLE,INFO,...)		\
+					WlogStyleOriginal(INFO_STYLE,INFO,##__VA_ARGS__)
 
-#define		Walarm(info,...)		WLOG_PRINT(Trmnl_RST WLOG_ALARM_HEAD_ATTR "[file:%s][time:%s][date:%s][func:%s][line:%d][" Trmnl_SET_FORE(Trmnl_color_yellow)  info Trmnl_RST WLOG_ALARM_HEAD_ATTR "]\r\n" Trmnl_RST, __FILE__, __TIME__, __DATE__, __func__, __LINE__, ##__VA_ARGS__);
-
-#define		Wbuf(FORMAT,BUF,LENGTH,INFO,...)		WLOG_PRINT(Trmnl_RST WLOG_HEAD_ATTR "[file:%s][time:%s][date:%s][func:%s][line:%d] {" WLOG_INFO_ATTR INFO "\r\n",__FILE__, __TIME__, __DATE__, __func__, __LINE__, ##__VA_ARGS__); \
-			{\
-				int WDEBUG_BUF_LEN; \
-				for (WDEBUG_BUF_LEN = 0; WDEBUG_BUF_LEN < LENGTH; ++WDEBUG_BUF_LEN) { \
-					WLOG_PRINT (FORMAT "  ", BUF[WDEBUG_BUF_LEN]); \
-				}\
-				WLOG_PRINT(Trmnl_RST WLOG_HEAD_ATTR "\r\n}\r\n" Trmnl_RST);\
-			}
-
-#elif WLOG_FLAG == 2
-
-#define		WLOG_HEAD_ATTR			 	Trmnl_SET_FORE(Trmnl_color_yellow)
-#define		WLOG_ALARM_HEAD_ATTR		Trmnl_SET_FORE(Trmnl_color_white)
-#define		WLOG_INFO_ATTR				Trmnl_SET_FORE(Trmnl_color_green)
-
-#define		Wlog(info,...)		WLOG_PRINT(Trmnl_RST WLOG_HEAD_ATTR "[file:%s][func:%s][line:%d][" WLOG_INFO_ATTR  info Trmnl_RST WLOG_HEAD_ATTR "]\r\n" Trmnl_RST, __FILE__, __func__, __LINE__, ##__VA_ARGS__);
-
-#define		Werr(info,...)		WLOG_PRINT(Trmnl_RST WLOG_HEAD_ATTR "[file:%s][func:%s][line:%d][" Trmnl_SET_FORE(Trmnl_color_red)  info Trmnl_RST WLOG_HEAD_ATTR "]\r\n" Trmnl_RST, __FILE__, __func__, __LINE__, ##__VA_ARGS__);
-
-#define		Walarm(info,...)		WLOG_PRINT(Trmnl_RST WLOG_ALARM_HEAD_ATTR "[file:%s][func:%s][line:%d][" Trmnl_SET_FORE(Trmnl_color_yellow)  info Trmnl_RST WLOG_ALARM_HEAD_ATTR "]\r\n" Trmnl_RST, __FILE__, __func__, __LINE__, ##__VA_ARGS__);
-
-#define		WlogStyle(STYLE,info,...)		WLOG_PRINT(Trmnl_RST WLOG_HEAD_ATTR "[file:%s][func:%s][line:%d][" STYLE  info Trmnl_RST WLOG_HEAD_ATTR "]\r\n" Trmnl_RST, __FILE__, __func__, __LINE__, ##__VA_ARGS__);
-
-#define		Wbuf(FORMAT,BUF,LENGTH,INFO,...)		WLOG_PRINT(Trmnl_RST WLOG_HEAD_ATTR "[file:%s][func:%s][line:%d] {" WLOG_INFO_ATTR INFO "\r\n",__FILE__, __func__, __LINE__ , ##__VA_ARGS__);\
-			{\
-				int WDEBUG_BUF_LEN; \
-				for (WDEBUG_BUF_LEN = 0; WDEBUG_BUF_LEN < LENGTH; ++WDEBUG_BUF_LEN) {\
-						WLOG_PRINT(FORMAT "  ", BUF[WDEBUG_BUF_LEN]); \
-				}\
-				WLOG_PRINT(Trmnl_RST WLOG_HEAD_ATTR "\r\n}\r\n" Trmnl_RST);\
-			}
-
-#endif
+	#endif
 
 #endif
 
