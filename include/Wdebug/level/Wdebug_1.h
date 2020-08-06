@@ -11,7 +11,7 @@
 #include "Wdebug/original/WdebugOriginal.h"
 
 //#ifdef WDEBUG_ENABLE_1
-#if WDEBUG_LEVEL		<= 1
+#if WDEBUG_LEVEL		WDEBUG_LEVEL_DIR			1
 
 //#define 	Wdebug_if_FUN_1(IF,FUN)    if (IF) {FUN}
 //

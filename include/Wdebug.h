@@ -8,7 +8,12 @@
 #ifndef __WDEBUG_H
 #define __WDEBUG_H
 
-#define		WDEBUG_FLAG		2
+#include <stdio.h>
+//定义debug打印输出函数，
+//如需关闭所有debug信息只需注释此行
+#define		WPRINT		printf
+
+#define		WDEBUG_LEVEL_ENABLE
 #define		WDEBUG_LEVEL		 0
 #include "Wdebug/level/Wdebug_0.h"
 #include "Wdebug/level/Wdebug_1.h"

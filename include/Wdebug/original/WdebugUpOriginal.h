@@ -10,16 +10,16 @@
 
 #include "Wdebug/Wprint.h"
 
-#ifndef WDEBUG_UP_DIR
-#define		WDEBUG_UP_DIR		>=
-#endif // !WDEBUG_UP_DIR
+#ifndef WDEBUG_UP_LEVEL_DIR
+#define		WDEBUG_UP_LEVEL_DIR		>=
+#endif // !WDEBUG_UP_LEVEL_DIR
 
 
-#define		WdebugUpOriginal(LEVEL,info,...)		if (LEVEL WDEBUG_UP_DIR WDEBUG_UP_LEVEL) {\
+#define		WdebugUpOriginal(LEVEL,info,...)		if (LEVEL WDEBUG_UP_LEVEL_DIR WDEBUG_UP_LEVEL) {\
 					Wprint(info,##__VA_ARGS__);\
 				}
 
-#define		WdebugBufUpOriginal(LEVEL,FORMAT,BUF,LENGTH,INFO,...)		if (LEVEL WDEBUG_UP_DIR WDEBUG_UP_LEVEL) {\
+#define		WdebugBufUpOriginal(LEVEL,FORMAT,BUF,LENGTH,INFO,...)		if (LEVEL WDEBUG_UP_LEVEL_DIR WDEBUG_UP_LEVEL) {\
 					WprintBuf(FORMAT,BUF,LENDTH,INFO,##__VA_ARGS__); \
 				}
 

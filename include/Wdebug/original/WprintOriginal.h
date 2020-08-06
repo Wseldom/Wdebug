@@ -9,24 +9,15 @@
 #define __WPRINTORIGINAL_H
 
 #include "Wdebug/WTrmnlCtrl.h"
-#include <stdio.h>
 
 #ifndef WDEBUG_ENTER_KEY
 #define		WDEBUG_ENTER_KEY		"\r\n"
 #endif // !WDEBUG_ENTER_KEY
 
 
-//"[文件:%s][时间:%s][日期:%s][函数:%s][行:%d]["
-//"]"
-//
-//"[文件:%s][函数:%s][行:%d]["
-
-//"[文件:%s][函数:%s][行:%d] {"
-//"}"
-
-#ifndef WPRINT
-#define		WPRINT		printf
-#endif // !WPRINT
+//#ifndef WPRINT
+//#define		WPRINT		printf
+//#endif // !WPRINT
 
 	#ifndef WPRINT
 	
