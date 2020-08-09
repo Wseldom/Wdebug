@@ -1,17 +1,17 @@
 /******************************************************************************
-  > File Name		: Wprint.h
+  > File Name		: WprintReload.h
   > Author			: dong
   > Mail			: 3235459847@qq.com
   > Created Time	: 2020年08月05日 星期三 20时03分03秒
 ******************************************************************************/
 
-#ifndef __WPRINT_H
-#define __WPRINT_H
+#ifndef __WPRINTRELOAD_H
+#define __WPRINTRELOAD_H
 
 #ifdef WDEBUG_MAKEFILE_OK
-#include "Wdebug/original/WprintOriginal.h"
+#include "Wdebug/reload/original/WprintOriginalReload.h"
 #else
-#include "./original/WprintOriginal.h"
+#include "./original/WprintOriginalReload.h"
 #endif // WDEBUG_MAKEFILE_OK
 
 

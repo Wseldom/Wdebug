@@ -1,17 +1,17 @@
 /******************************************************************************
-  > File Name		: WdebugUp.h
+  > File Name		: WdebugUpReload.h
   > Author			: dong
   > Mail			: 3235459847@qq.com
   > Created Time	: 2020年04月28日 星期二 10时58分27秒
 ******************************************************************************/
 
-#ifndef __WDEBUG_PRINT_UP_H
-#define __WDEBUG_PRINT_UP_H
+#ifndef __WDEBUG_PRINT_UP_REALOD_H
+#define __WDEBUG_PRINT_UP_REALOD_H
 
 #ifdef WDEBUG_MAKEFILE_OK
-#include "Wdebug/original/WdebugUpOriginal.h"
+#include "Wdebug/reload/original/WdebugUpOriginalReload.h"
 #else 
-#include "./original/WdebugUpOriginal.h"
+#include "./original/WdebugUpOriginalReload.h"
 #endif // WDEBUG_MAKEFILE_OK
 
 

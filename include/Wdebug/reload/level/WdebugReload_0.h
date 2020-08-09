@@ -1,17 +1,17 @@
 /******************************************************************************
-  > File Name		: Wdebug_0.h
+  > File Name		: WdebugReload_0.h
   > Author			: dong
   > Mail			: 3235459847@qq.com
   > Created Time	: 2020年04月02日 星期四 11时50分52秒
 ******************************************************************************/
 
-#ifndef __WDEBUG_0_H
-#define __WDEBUG_0_H
+#ifndef __WDEBUGRELOAD_0_H
+#define __WDEBUGRELOAD_0_H
 
 #ifdef WDEBUG_MAKEFILE_OK
-#include "Wdebug/original/WdebugOriginal.h"
+#include "Wdebug/reload/original/WdebugOriginalReload.h"
 #else
-#include "../original/WdebugOriginal.h"
+#include "../original/WdebugOriginalReload.h"
 #endif // WDEBUG_MAKEFILE_OK
 
 //#ifdef WDEBUG_ENABLE_0
@@ -42,7 +42,7 @@
 //#endif // !Wdebug_pFUN_0
 
 #ifndef Wdebug_0
-#define		Wdebug_0(INFO,...)		Wdebug(INFO, ##__VA_ARGS__)
+#define		Wdebug_0(INFO,...)		Wdebug(INFO , ##__VA_ARGS__)
 #endif // !Wdebug_0
 
 #ifndef WdebugBuf_0
@@ -54,7 +54,7 @@
 #endif // !Wdebug_if_0
 
 #ifndef Wdebug_else_0
-#define		Wdebug_else_0(INFO,...)		else { Wdebug(INFO, ##__VA_ARGS__) }
+#define		Wdebug_else_0(info,...)		else { Wdebug(INFO, ##__VA_ARGS__) }
 #endif // !Wdebug_else_0
 
 #ifndef Wdebug_elif_0

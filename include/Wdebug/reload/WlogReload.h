@@ -1,17 +1,17 @@
 /******************************************************************************
-  > File Name		: Wlog.h
+  > File Name		: WlogReload.h
   > Author			: dong
   > Mail			: 3235459847@qq.com
   > Created Time	: 2020年05月22日 星期五 15时43分07秒
 ******************************************************************************/
 
-#ifndef __WLOG_H
-#define __WLOG_H
+#ifndef __WLOGRELOAD_H
+#define __WLOGRELOAD_H
 
 #ifdef WDEBUG_MAKEFILE_OK
-#include "Wdebug/original/WlogOriginal.h"
+#include "Wdebug/reload/original/WlogOriginalReload.h"
 #else
-#include "./original/WlogOriginal.h"
+#include "./original/WlogOriginalReload.h"
 #endif // WDEBUG_MAKEFILE_OK
 
 	#ifndef WLOG_ENABLE

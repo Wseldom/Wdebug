@@ -1,17 +1,17 @@
 /******************************************************************************
-  > File Name		: WdebugDownOriginal.h
+  > File Name		: WdebugDownOriginalReload.h
   > Author			: dong
   > Mail			: 3235459847@qq.com
   > Created Time	: 2020年08月05日 星期三 19时59分29秒
 ******************************************************************************/
 
-#ifndef __WDEBUGDOWNORIGINAL_H
-#define __WDEBUGDOWNORIGINAL_H
+#ifndef __WDEBUGDOWNORIGINALRELOAD_H
+#define __WDEBUGDOWNORIGINALRELOAD_H
 
 #ifdef WDEBUG_MAKEFILE_OK
-#include "Wdebug/Wprint.h"
+#include "Wdebug/reload/WprintReload.h"
 #else
-#include "../Wprint.h"
+#include "../WprintReload.h"
 #endif // WDEBUG_MAKEFILE_OK
 
 #ifndef WDEBUG_DOWN_LEVEL_DIR

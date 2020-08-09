@@ -1,17 +1,17 @@
 /******************************************************************************
-  > File Name		: WprintOriginal.h
+  > File Name		: WprintOriginalReload.h
   > Author			: dong
   > Mail			: 3235459847@qq.com
   > Created Time	: 2020年04月02日 星期四 11时51分42秒
 ******************************************************************************/
 
-#ifndef __WPRINTORIGINAL_H
-#define __WPRINTORIGINAL_H
+#ifndef __WPRINTORIGINALRELOAD_H
+#define __WPRINTORIGINALRELOAD_H
 
 #ifdef WDEBUG_MAKEFILE_OK
-#include "Wdebug/WTrmnlCtrl.h"
+#include "Wdebug/reload/WTrmnlCtrlReload.h"
 #else
-#include "../WTrmnlCtrl.h"
+#include "../WTrmnlCtrlReload.h"
 #endif // WDEBUG_MAKEFILE_OK
 
 #ifndef WDEBUG_ENTER_KEY
