@@ -15,31 +15,16 @@
 #endif // WDEBUG_MAKEFILE_OK
 
 
-
-
-	#ifndef WDEBUG_UP_ENABLE
-
 #ifndef WdebugUp
-		#define		WdebugUp(LEVEL,info,...)
+	#define		WdebugUp(LEVEL,INFO,...)		\
+				WdebugUpOriginal(LEVEL,INFO,##__VA_ARGS__)
 #endif // !WdebugUp
 
 #ifndef WdebugBufUp
-		#define		WdebugBufUp(LEVEL,FORMAT,BUF,LENGTH, INFO, ...)
+	#define		WdebugBufUp(LEVEL,FORMAT,BUF,LENGTH,INFO,...)		\
+				WdebugBufUpOriginal(LEVEL,FORMAT,BUF,LENGTH,INFO,##__VA_ARGS__)
 #endif // !WdebugBufUp
 
-	#else
-
-#ifndef WdebugUp
-		#define		WdebugUp(LEVEL,info,...)		\
-					WdebugUpOriginal(LEVEL,info,##__VA_ARGS__)
-#endif // !WdebugUp
-
-#ifndef WdebugBufUp
-		#define		WdebugBufUp(LEVEL,FORMAT,BUF,LENGTH,INFO,...)		\
-							WdebugBufUpOriginal(LEVEL,FORMAT,BUF,LENGTH,INFO,##__VA_ARGS__)
-#endif // !WdebugBufUp
-
-	#endif
 
 #endif
 

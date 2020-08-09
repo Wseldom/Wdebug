@@ -35,8 +35,8 @@
 #endif // !WalarmOriginal
 
 #ifndef WlogStyleOriginal
-#define		WlogStyleOriginal(INFO_STYLE,info,...)		\
-			WprintStyle(INFO_STYLE,info,##__VA_ARGS__)
+#define		WlogStyleOriginal(INFO_STYLE,INFO,...)		\
+			WprintStyle(INFO_STYLE,INFO,##__VA_ARGS__)
 #endif // !WlogStyleOriginal
 
 #endif

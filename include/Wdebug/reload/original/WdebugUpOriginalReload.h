@@ -19,8 +19,8 @@
 #endif // !WDEBUG_UP_LEVEL_DIR
 
 #ifndef WdebugUpOriginal
-#define		WdebugUpOriginal(LEVEL,info,...)		if (LEVEL WDEBUG_UP_LEVEL_DIR WDEBUG_UP_LEVEL) {\
-					Wprint(info,##__VA_ARGS__);\
+#define		WdebugUpOriginal(LEVEL,INFO,...)		if (LEVEL WDEBUG_UP_LEVEL_DIR WDEBUG_UP_LEVEL) {\
+					Wprint(INFO,##__VA_ARGS__);\
 				}
 #endif // !WdebugUpOriginal
 

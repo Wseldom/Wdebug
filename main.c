@@ -21,7 +21,7 @@ int main(void)
 	WdebugUp(3, "%s 当前等级为：%d", "升序等级测试失败!", WDEBUG_UP_LEVEL);
 
 	WdebugDown(3, "%s", "降序等级测试!");
-	WdebugDown(1, "%s 当前等级为：%d", "将徐等级测试失败!", WDEBUG_UP_LEVEL);
+	WdebugDown(1, "%s 当前等级为：%d", "降序等级测试失败!", WDEBUG_UP_LEVEL);
 
 	Wlog("打印日志");
 	WlogStyle(Trmnl_FGC_BLUE, "指定风格日志");

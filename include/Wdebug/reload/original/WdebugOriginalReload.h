@@ -18,29 +18,16 @@
 #define	WDEBUG_LEVEL_DIR		<=
 #endif
 
-	#ifndef WDEBUG_LEVEL_ENABLE
-
 #ifndef Wdebug
-		#define		Wdebug(INFO,...)			
+	#define		Wdebug(INFO,...)			\
+				Wprint(INFO,##__VA_ARGS__)
 #endif // !Wdebug
 
 #ifndef WdebugBuf
-		#define		WdebugBuf(FORMAT,BUF,LENGTH,INFO,...)		
+	#define		WdebugBuf(FORMAT,BUF,LENGTH,INFO,...)		\
+				WprintBuf(FORMAT,BUF,LENGTH,INFO,##__VA_ARGS__)
 #endif // !WdebugBuf
 
-	#else
-
-#ifndef Wdebug
-		#define		Wdebug(INFO,...)			\
-					Wprint(INFO,##__VA_ARGS__)
-#endif // !Wdebug
-
-#ifndef WdebugBuf
-		#define		WdebugBuf(FORMAT,BUF,LENGTH,INFO,...)		\
-					WprintBuf(FORMAT,BUF,LENGTH,INFO,##__VA_ARGS__)
-#endif // !WdebugBuf
-
-	#endif // !WDEBUG_LEVEL_ENABLE
 
 #endif
 

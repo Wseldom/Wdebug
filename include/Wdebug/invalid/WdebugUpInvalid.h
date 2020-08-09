@@ -8,23 +8,22 @@
 #ifndef __WDEBUG_PRINT_UP_H
 #define __WDEBUG_PRINT_UP_H
 
-#ifdef WDEBUG_MAKEFILE_OK
-#include "Wdebug/original/WdebugUpOriginal.h"
-#else 
-#include "./original/WdebugUpOriginal.h"
-#endif // WDEBUG_MAKEFILE_OK
+//#ifdef WDEBUG_MAKEFILE_OK
+//#include "Wdebug/original/WdebugUpOriginal.h"
+//#else 
+//#include "./original/WdebugUpOriginal.h"
+//#endif // WDEBUG_MAKEFILE_OK
+
+
 
 
 #ifndef WdebugUp
-	#define		WdebugUp(LEVEL,INFO,...)		\
-				WdebugUpOriginal(LEVEL,INFO,##__VA_ARGS__)
+		#define		WdebugUp(LEVEL,INFO,...)
 #endif // !WdebugUp
 
 #ifndef WdebugBufUp
-	#define		WdebugBufUp(LEVEL,FORMAT,BUF,LENGTH,INFO,...)		\
-				WdebugBufUpOriginal(LEVEL,FORMAT,BUF,LENGTH,INFO,##__VA_ARGS__)
+		#define		WdebugBufUp(LEVEL,FORMAT,BUF,LENGTH, INFO, ...)
 #endif // !WdebugBufUp
-
 
 #endif
 

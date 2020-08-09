@@ -54,7 +54,7 @@
 #endif // !Wdebug_if_0
 
 #ifndef Wdebug_else_0
-#define		Wdebug_else_0(info,...)		else { Wdebug(INFO, ##__VA_ARGS__) }
+#define		Wdebug_else_0(INFO,...)		else { Wdebug(INFO, ##__VA_ARGS__) }
 #endif // !Wdebug_else_0
 
 #ifndef Wdebug_elif_0
@@ -67,60 +67,6 @@
 
 #ifndef Wdebug_default_0
 #define		Wdebug_default_0(INFO,...)		default: { Wdebug(INFO, ##__VA_ARGS__) break;}
-#endif // !Wdebug_default_0
-
-#else	
-
-//#ifndef Wdebug_if_FUN_0
-//#define 	Wdebug_if_FUN_0(IF,FUN)   
-//#endif // !Wdebug_if_FUN_0
-//
-//#ifndef Wdebug_elif_FUN_0
-//#define 	Wdebug_elif_FUN_0(elif,FUN)   
-//#endif // !Wdebug_elif_FUN_0
-//
-//#ifndef Wdebug_else_FUN_0
-//#define 	Wdebug_else_FUN_0(FUN)  
-//#endif // !Wdebug_else_FUN_0
-//
-//#ifndef Wdebug_case_FUN_0
-//#define 	Wdebug_case_FUN_0(CASE,FUN)   
-//#endif // !Wdebug_case_FUN_0
-//
-//#ifndef Wdebug_default_FUN_0
-//#define 	Wdebug_default_FUN_0(FUN)   
-//#endif // !Wdebug_default_FUN_0
-//
-//#ifndef Wdebug_pFUN_0
-//#define 	Wdebug_pFUN_0(FUN,param)   
-//#endif // !Wdebug_pFUN_0
-
-#ifndef Wdebug_0
-#define		Wdebug_0(INFO,...)
-#endif // !Wdebug_0
-
-#ifndef WdebugBuf_0
-#define		WdebugBuf_0(FORMAT, BUF, LENGTH, INFO, ...)
-#endif // !WdebugBuf_0
-
-#ifndef Wdebug_if_0
-#define		Wdebug_if_0(IF,INFO,...)
-#endif // !Wdebug_if_0
-
-#ifndef Wdebug_else_0
-#define		Wdebug_else_0(INFO,...)
-#endif // !Wdebug_else_0
-
-#ifndef Wdebug_elif_0
-#define		Wdebug_elif_0(ELIF,INFO,...)
-#endif // !Wdebug_elif_0
-
-#ifndef Wdebug_case_0
-#define		Wdebug_case_0(CASE,INFO,...)
-#endif // !Wdebug_case_0
-
-#ifndef Wdebug_default_0
-#define		Wdebug_default_0(INFO,...)
 #endif // !Wdebug_default_0
 
 #endif
