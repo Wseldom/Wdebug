@@ -17,6 +17,14 @@
 
 #if WDEBUG_LEVEL		WDEBUG_LEVEL_DIR			1
 
+#ifdef WDEBUG_MAKEFILE_OK 
+#include "Wdebug/invalid/level/WdebugInvalid_1.h"
+#else 
+#include "../invalid/level/WdebugInvalid_1.h"
+#endif
+
+#endif
+
 //#ifndef Wdebug_if_FUN_1
 //#define 	Wdebug_if_FUN_1(IF,FUN)    if (IF) {FUN}
 //#endif // !Wdebug_if_FUN_1
@@ -69,7 +77,6 @@
 #define		Wdebug_default_1(INFO,...)		default: { Wdebug(INFO, ##__VA_ARGS__) break;}
 #endif // !Wdebug_default_1
 
-#endif
 
 
 #endif

@@ -21,6 +21,10 @@
 //#include "Wdebug/invalid/WlogInvalid.h"//包含此文件关闭日志打印
 //#include "Wdebug/invalid/WTrmnlCtrlInvalid.h"//包含此文件去除风格控制
 
+//#include "Wdebug/invalid/level/WdebugInvalid_0.h"
+//#include "Wdebug/invalid/level/WdebugInvalid_1.h"
+
+
 #define		WDEBUG_LEVEL		 0
 //#include "Wdebug/reload/level/WdebugReload_0.h"//重载功能
 //#include "Wdebug/reload/level/WdebugReload_1.h"//重载功能

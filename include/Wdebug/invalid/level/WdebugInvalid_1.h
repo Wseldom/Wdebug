@@ -1,12 +1,12 @@
 /******************************************************************************
-  > File Name		: Wdebug_1.h
+  > File Name		: WdebugInvalid_1.h
   > Author			: dong
   > Mail			: 3235459847@qq.com
   > Created Time	: 2020年04月02日 星期四 17时17分32秒
 ******************************************************************************/
 
-#ifndef __WDEBUG_1_H
-#define __WDEBUG_1_H
+#ifndef __WDEBUGINVALID_1_H
+#define __WDEBUGINVALID_1_H
 
 //#ifdef WDEBUG_MAKEFILE_OK
 //#include "Wdebug/original/WdebugOriginal.h"

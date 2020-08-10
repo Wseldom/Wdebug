@@ -13,7 +13,7 @@ int main(void)
 	WdebugBuf_0("%.2X", buf, sizeof(buf), "buf data:");
 	Wdebug_0("debug测试:level = 0");
 	Wdebug_if_0(aa == 123, "debug测试:%d", aa);
-	Wdebug_0("debug测试:level = 1");
+	Wdebug_1("debug测试:level = 1");
 	Wdebug_if_1(aa == 123, "debug测试:%d", aa);
 
 
