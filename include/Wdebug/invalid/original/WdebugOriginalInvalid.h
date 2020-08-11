@@ -14,6 +14,9 @@
 //#include "../Wprint.h"
 //#endif // WDEBUG_MAKEFILE_OK
 
+#ifndef  WDEBUG_LEVEL
+#define		WDEBUG_LEVEL
+#endif
 #ifndef WDEBUG_LEVEL_DIR
 #define	WDEBUG_LEVEL_DIR
 #endif
