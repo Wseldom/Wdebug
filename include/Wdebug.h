@@ -26,7 +26,7 @@
 //#include "Wdebug/invalid/level/WdebugInvalid_1.h"
 
 
-//#define		WDEBUG_LEVEL		 0
+#define		WDEBUG_LEVEL		 1
 //#include "Wdebug/reload/level/WdebugReload_0.h"//重载功能
 //#include "Wdebug/reload/level/WdebugReload_1.h"//重载功能
 #include "Wdebug/level/Wdebug_0.h"

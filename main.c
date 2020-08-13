@@ -16,7 +16,6 @@ int main(void)
 	Wdebug_1("debug测试:level = 1");
 	Wdebug_if_1(aa == 123, "debug测试:%d", aa);
 
-
 	WdebugUp(1, "%s", "升序等级测试!");
 	WdebugUp(3, "%s 当前等级为：%d", "升序等级测试失败!", WDEBUG_UP_LEVEL);
 
