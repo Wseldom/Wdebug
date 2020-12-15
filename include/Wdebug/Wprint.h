@@ -28,10 +28,10 @@
 #define		WDEBUG_BUF_TAIL			"}"
 #endif // !WDEBUG_BUF_TAIL
 #ifndef WDEBUG_PARAM
-#define		WDEBUG_PARAM			__FILE__, __func__, __LINE__
+#define		WDEBUG_PARAM			__FILE__, __func__, __LINE__,
 #endif // !WDEBUG_PARAM
 #ifndef WDEBUG_BUF_PARAM
-#define		WDEBUG_BUF_PARAM		__FILE__, __func__, __LINE__
+#define		WDEBUG_BUF_PARAM		__FILE__, __func__, __LINE__,
 #endif // !WDEBUG_BUF_PARAM
 
 
