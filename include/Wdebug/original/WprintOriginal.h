@@ -27,7 +27,7 @@
 #endif // !WDEBUG_INFO_ATTR
 	
 #ifndef WprintOriginal
-	#define		WprintOriginal(HEAD,TAIL,PARAM,INFO,...)		WPRINT(Trmnl_RST WDEBUG_HEAD_ATTR HEAD WDEBUG_INFO_ATTR  INFO Trmnl_SET_FORE(Trmnl_color_yellow) TAIL WDEBUG_ENTER_KEY Trmnl_RST PARAM,  ##__VA_ARGS__);
+	#define		WprintOriginal(HEAD,TAIL,PARAM,INFO,...)		WPRINT(Trmnl_RST WDEBUG_HEAD_ATTR HEAD WDEBUG_INFO_ATTR  INFO Trmnl_SET_FORE(Trmnl_color_yellow) TAIL Trmnl_RST WDEBUG_ENTER_KEY PARAM,  ##__VA_ARGS__);
 #endif // !WprintOriginal
 
 #ifndef WprintBufOriginal
@@ -37,16 +37,16 @@
 					for (WDEBUG_BUF_LEN = 0; WDEBUG_BUF_LEN < LENGTH; ++WDEBUG_BUF_LEN) {\
 							WPRINT(FORMAT "  ", BUF[WDEBUG_BUF_LEN]); \
 					}\
-					WPRINT(Trmnl_SET_FORE(Trmnl_color_yellow) WDEBUG_ENTER_KEY TAIL WDEBUG_ENTER_KEY Trmnl_RST);\
+					WPRINT(Trmnl_SET_FORE(Trmnl_color_yellow) WDEBUG_ENTER_KEY TAIL Trmnl_RST WDEBUG_ENTER_KEY);\
 				}
 #endif // !WprintBufOriginal
 
 #ifndef WprintStyleOriginal
-	#define		WprintStyleOriginal(HEAD,TAIL,PARAM,INFO_STYLE,INFO,...)		WPRINT(Trmnl_RST WDEBUG_HEAD_ATTR HEAD INFO_STYLE  INFO Trmnl_RST WDEBUG_HEAD_ATTR TAIL WDEBUG_ENTER_KEY Trmnl_RST PARAM, ##__VA_ARGS__);
+	#define		WprintStyleOriginal(HEAD,TAIL,PARAM,INFO_STYLE,INFO,...)		WPRINT(Trmnl_RST WDEBUG_HEAD_ATTR HEAD INFO_STYLE  INFO Trmnl_RST WDEBUG_HEAD_ATTR TAIL Trmnl_RST WDEBUG_ENTER_KEY PARAM, ##__VA_ARGS__);
 #endif // !WprintStyleOriginal
 
 #ifndef WprintAllStyleOriginal
-	#define		WprintAllStyleOriginal(HEAD,TAIL,PARAM,HEAD_STYLE,INFO_STYLE,INFO,...)	WPRINT(Trmnl_RST HEAD_STYLE HEAD INFO_STYLE INFO Trmnl_RST HEAD_STYLE TAIL WDEBUG_ENTER_KEY Trmnl_RST PARAM, ##__VA_ARGS__);
+	#define		WprintAllStyleOriginal(HEAD,TAIL,PARAM,HEAD_STYLE,INFO_STYLE,INFO,...)	WPRINT(Trmnl_RST HEAD_STYLE HEAD INFO_STYLE INFO Trmnl_RST HEAD_STYLE TAIL Trmnl_RST WDEBUG_ENTER_KEY PARAM, ##__VA_ARGS__);
 #endif // !WprintAllStyleOriginal
 
 
